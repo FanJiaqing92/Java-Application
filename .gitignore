@@ -1,1 +1,3 @@
-﻿xml/jaxb/.idea/
+﻿.idea/
+out/
+Java-Application.iml

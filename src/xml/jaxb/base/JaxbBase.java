@@ -1,6 +1,6 @@
-package jaxb.base;
+package xml.jaxb.base;
 
-import jaxb.base.pojo.Server;
+import xml.jaxb.base.pojo.Server;
 
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
@@ -8,13 +8,17 @@ import javax.xml.bind.Marshaller;
 import javax.xml.bind.Unmarshaller;
 import java.io.File;
 
-class JaxbBase {
+/**
+ * 雨下之月
+ * 2018.8.30
+ */
+public class JaxbBase {
     private String xmlPath;
-    JaxbBase(String xmlPath){
+    public JaxbBase(String xmlPath){
         this.xmlPath = xmlPath;
     }
 
-    Server parse(){
+    public Server parse(){
         Server server;
         try {
             JAXBContext jaxbContext = JAXBContext.newInstance(Server.class);
@@ -28,7 +32,7 @@ class JaxbBase {
         return server;
     }
 
-    void write(Server server){
+    public void write(Server server){
         try {
             JAXBContext jaxbContext = JAXBContext.newInstance(Server.class);
             Marshaller marshaller = jaxbContext.createMarshaller();
@@ -39,5 +43,4 @@ class JaxbBase {
             e.printStackTrace();
         }
     }
-
 }
