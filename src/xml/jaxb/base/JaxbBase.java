@@ -28,7 +28,6 @@ public class JaxbBase {
             e.printStackTrace();
             return null;
         }
-
         return server;
     }
 

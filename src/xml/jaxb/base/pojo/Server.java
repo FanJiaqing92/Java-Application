@@ -1,6 +1,7 @@
 package xml.jaxb.base.pojo;
 
 import javax.xml.bind.annotation.*;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * 映射的xml的节点的名称，如果不写name属性，则默认节点名称为类名，还有一个属性是namespace，后续再补充
@@ -24,7 +25,7 @@ import javax.xml.bind.annotation.*;
  *  后续验证了再补充
  *  这个注解还有name和namespace属性，作用后续再补充
  */
-@XmlType(propOrder = {"id", "name", "ip", "port"})
+@XmlType(propOrder = {"id", "name", "ip", "port", "complexNode"})
 public class Server {
     private int id;
     private String name;
@@ -44,9 +45,8 @@ public class Server {
     @XmlAttribute(name = "ipTyp")
     private String ipType;
 
-//    @XmlJavaTypeAdapter(value = ComplexNodeName.class)
-//    private
-
+    @XmlJavaTypeAdapter(value = ComplexNodeAdapter.class)
+    private ComplexNode complexNode;
 
     public Server(){
 
@@ -98,5 +98,13 @@ public class Server {
 
     public void setIgnoreTest(int ignoreTest) {
         this.ignoreTest = ignoreTest;
+    }
+
+    public ComplexNode getComplexNode() {
+        return complexNode;
+    }
+
+    public void setComplexNode(ComplexNode complexNode) {
+        this.complexNode = complexNode;
     }
 }

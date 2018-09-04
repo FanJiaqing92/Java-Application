@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<serverExample>
+<serverExample ipTyp="v4">
     <id>1</id>
-    <name>Test</name>
+    <name>I'm a server</name>
     <ip>1.1.1.1</ip>
-    <port>8088</port>
+    <port>8888</port>
+    <complexNode>first-second-third</complexNode>
 </serverExample>
