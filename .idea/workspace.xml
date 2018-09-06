@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fa67cc27-09ba-4c1d-ac6a-c17be990af92" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/xml/jaxb/base/pojo/ComplexNodeAdapter.java" afterDir="false" />
+    <list default="true" id="fa67cc27-09ba-4c1d-ac6a-c17be990af92" name="Default Changelist" comment="完成了Jaxb的基础内容部分">
+      <change afterPath="$PROJECT_DIR$/src/test/xml/jaxb/base/JaxbBaseSecondTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/xml/jaxb/base/parseSecond.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/xml/jaxb/base/writeSecond.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/xml/jaxb/base/JaxbBaseSecond.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/xml/jaxb/base/pojo/ServerSecond.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/junitgenerator-prj-settings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/junitgenerator-prj-settings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/xml/jaxb/base/JaxbBaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/xml/jaxb/base/JaxbBaseTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/xml/jaxb/base/parse.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/xml/jaxb/base/parse.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/xml/jaxb/base/write.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/xml/jaxb/base/write.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/xml/jaxb/base/ComplexNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/xml/jaxb/base/pojo/ComplexNode.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/xml/jaxb/base/JaxbBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/xml/jaxb/base/JaxbBase.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/xml/jaxb/base/pojo/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/xml/jaxb/base/pojo/Server.java" afterDir="false" />
     </list>
@@ -22,47 +23,80 @@
     <session id="1894425646">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
+          <entry key="project.closed" value="2" />
+          <entry key="project.open.time.12" value="2" />
           <entry key="project.open.time.2" value="1" />
           <entry key="project.open.time.8" value="1" />
-          <entry key="project.opened" value="2" />
+          <entry key="project.opened" value="4" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="gitignore" value="3" />
-          <entry key="java" value="9" />
+          <entry key="java" value="18" />
           <entry key="md" value="1" />
-          <entry key="xml" value="8" />
+          <entry key="xml" value="11" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JAVA" value="9" />
+          <entry key="JAVA" value="18" />
           <entry key="PLAIN_TEXT" value="4" />
-          <entry key="XML" value="8" />
+          <entry key="XML" value="11" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="gitignore" value="37" />
-          <entry key="java" value="688" />
+          <entry key="java" value="2309" />
+          <entry key="txt" value="30" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="688" />
-          <entry key="PLAIN_TEXT" value="37" />
+          <entry key="JAVA" value="2309" />
+          <entry key="PLAIN_TEXT" value="67" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/xml/jaxb/base/pojo/ComplexNode.java">
           <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="286">
+              <caret line="13" column="5" selection-start-line="13" selection-start-column="5" selection-end-line="13" selection-end-column="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/xml/jaxb/base/JaxbBaseSecondTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="340">
+              <caret line="44" column="45" selection-start-line="44" selection-start-column="45" selection-end-line="44" selection-end-column="45" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/xml/jaxb/base/parseSecond.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="154">
+              <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/xml/jaxb/base/pojo/Server.java">
+          <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="274">
-              <caret line="13" column="5" lean-forward="true" selection-start-line="13" selection-start-column="5" selection-end-line="13" selection-end-column="5" />
+              <caret line="35" column="21" lean-forward="true" selection-start-line="35" selection-start-column="21" selection-end-line="35" selection-end-column="21" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -70,60 +104,47 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/xml/jaxb/base/pojo/ComplexNodeAdapter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="66">
-              <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+            <state relative-caret-position="88">
+              <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/xml/jaxb/base/JaxbBase.java">
+        <entry file="file://$PROJECT_DIR$/src/test/xml/jaxb/base/writeSecond.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="349">
-              <caret line="34" column="13" lean-forward="true" selection-start-line="34" selection-start-column="13" selection-end-line="34" selection-end-column="13" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#339#340#0" expanded="true" />
-                <element signature="e#377#378#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="132">
+              <caret line="6" column="15" lean-forward="true" selection-start-line="6" selection-start-column="15" selection-end-line="6" selection-end-column="15" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/xml/jaxb/base/pojo/Server.java">
+        <entry file="file://$PROJECT_DIR$/src/test/xml/jaxb/base/write.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="98">
-              <caret line="27" column="62" selection-start-line="27" selection-start-column="62" selection-end-line="27" selection-end-column="62" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1631#1632#0" expanded="true" />
-                <element signature="e#1659#1660#0" expanded="true" />
-                <element signature="e#1690#1691#0" expanded="true" />
-                <element signature="e#1717#1718#0" expanded="true" />
-                <element signature="e#2501#2502#0" expanded="true" />
-                <element signature="e#2535#2536#0" expanded="true" />
-                <element signature="e#2594#2595#0" expanded="true" />
-                <element signature="e#2640#2641#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="88">
+              <caret line="4" column="20" lean-forward="true" selection-start-line="4" selection-start-column="20" selection-end-line="4" selection-end-column="20" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/xml/jaxb/base/parse.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="154">
-              <caret line="7" column="16" lean-forward="true" selection-start-line="7" selection-start-column="16" selection-end-line="7" selection-end-column="16" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/xml/jaxb/base/JaxbBaseTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="286">
-              <caret line="46" column="38" selection-start-line="46" selection-start-column="38" selection-end-line="46" selection-end-column="38" />
+            <state relative-caret-position="298">
+              <caret line="38" column="41" selection-start-line="38" selection-start-column="41" selection-end-line="38" selection-end-column="41" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/xml/jaxb/base/JaxbBaseSecond.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="186">
+              <caret line="35" column="13" lean-forward="true" selection-start-line="35" selection-start-column="13" selection-end-line="35" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -147,17 +168,21 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/src/xml/jaxb/base/JaxbBase.java" />
         <option value="$PROJECT_DIR$/src/xml/jaxb/base/ComplexNode.java" />
         <option value="$PROJECT_DIR$/src/xml/jaxb/base/pojo/ComplexNodeAdapter.java" />
         <option value="$PROJECT_DIR$/src/xml/jaxb/base/pojo/ComplexNode.java" />
-        <option value="$PROJECT_DIR$/src/xml/jaxb/base/pojo/Server.java" />
         <option value="$PROJECT_DIR$/src/test/xml/jaxb/base/parse.xml" />
         <option value="$PROJECT_DIR$/src/test/xml/jaxb/base/JaxbBaseTest.java" />
+        <option value="$PROJECT_DIR$/src/xml/jaxb/base/JaxbBase.java" />
+        <option value="$PROJECT_DIR$/src/xml/jaxb/base/JaxbBaseSecond.java" />
+        <option value="$PROJECT_DIR$/src/test/xml/jaxb/base/JaxbBaseSecondTest.java" />
+        <option value="$PROJECT_DIR$/src/xml/jaxb/base/pojo/ServerSecond.java" />
+        <option value="$PROJECT_DIR$/src/test/xml/jaxb/base/parseSecond.xml" />
+        <option value="$PROJECT_DIR$/src/xml/jaxb/base/pojo/Server.java" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-75" />
     <option name="y" value="406" />
     <option name="width" value="1400" />
@@ -168,9 +193,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
-      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -194,22 +216,38 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="base" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="Java-Application" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Java-Application" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="base" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Java-Application" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Java-Application" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="base" type="462c0819:PsiDirectoryNode" />
+              <item name="pojo" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="AndroidView" />
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="Downloaded.Files.Path.Enabled" value="false" />
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1536071299461" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1536243047713" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/lib/commons-lang3-3.8.jar!/" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="settings.editor.selected.configurable" value="plugins.junitgenerator.application" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -228,7 +266,53 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.JaxbBaseTest.testParse">
+  <component name="RunManager" selected="JUnit.JaxbBaseSecondTest.testParse">
+    <configuration name="JaxbBaseSecondTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Java-Application" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="test.xml.jaxb.base.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="test.xml.jaxb.base" />
+      <option name="MAIN_CLASS_NAME" value="test.xml.jaxb.base.JaxbBaseSecondTest" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="JaxbBaseSecondTest.testParse" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Java-Application" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="test.xml.jaxb.base.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="test.xml.jaxb.base" />
+      <option name="MAIN_CLASS_NAME" value="test.xml.jaxb.base.JaxbBaseSecondTest" />
+      <option name="METHOD_NAME" value="testParse" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="JaxbBaseSecondTest.testWrite" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Java-Application" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="test.xml.jaxb.base.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="test.xml.jaxb.base" />
+      <option name="MAIN_CLASS_NAME" value="test.xml.jaxb.base.JaxbBaseSecondTest" />
+      <option name="METHOD_NAME" value="testWrite" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="JaxbBaseTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Java-Application" />
       <extension name="coverage">
@@ -259,32 +343,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="JaxbBaseTest.testWrite" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Java-Application" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="test.xml.jaxb.base.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="test.xml.jaxb.base" />
-      <option name="MAIN_CLASS_NAME" value="test.xml.jaxb.base.JaxbBaseTest" />
-      <option name="METHOD_NAME" value="testWrite" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <list>
-      <item itemvalue="JUnit.JaxbBaseTest.testWrite" />
       <item itemvalue="JUnit.JaxbBaseTest" />
       <item itemvalue="JUnit.JaxbBaseTest.testParse" />
+      <item itemvalue="JUnit.JaxbBaseSecondTest" />
+      <item itemvalue="JUnit.JaxbBaseSecondTest.testParse" />
+      <item itemvalue="JUnit.JaxbBaseSecondTest.testWrite" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.JaxbBaseSecondTest.testParse" />
+        <item itemvalue="JUnit.JaxbBaseSecondTest.testWrite" />
+        <item itemvalue="JUnit.JaxbBaseSecondTest" />
         <item itemvalue="JUnit.JaxbBaseTest.testParse" />
         <item itemvalue="JUnit.JaxbBaseTest" />
-        <item itemvalue="JUnit.JaxbBaseTest.testWrite" />
       </list>
     </recent_temporary>
   </component>
@@ -311,6 +383,27 @@
     <history-entry file="JaxbBaseTest - 2018.09.04 at 22h 21m 15s.xml">
       <configuration name="JaxbBaseTest" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="JaxbBaseTest_testParse - 2018.09.04 at 22h 26m 39s.xml">
+      <configuration name="JaxbBaseTest.testParse" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="JaxbBaseSecondTest - 2018.09.06 at 21h 43m 17s.xml">
+      <configuration name="JaxbBaseSecondTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="JaxbBaseSecondTest - 2018.09.06 at 21h 45m 51s.xml">
+      <configuration name="JaxbBaseSecondTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="JaxbBaseSecondTest - 2018.09.06 at 21h 47m 16s.xml">
+      <configuration name="JaxbBaseSecondTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="JaxbBaseSecondTest_testParse - 2018.09.06 at 22h 07m 05s.xml">
+      <configuration name="JaxbBaseSecondTest.testParse" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="JaxbBaseSecondTest_testWrite - 2018.09.06 at 22h 09m 27s.xml">
+      <configuration name="JaxbBaseSecondTest.testWrite" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="JaxbBaseSecondTest_testParse - 2018.09.06 at 22h 09m 45s.xml">
+      <configuration name="JaxbBaseSecondTest.testParse" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -325,7 +418,7 @@
     <frame x="-8" y="-8" width="1858" height="1096" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25307262" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25977653" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -334,7 +427,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49888268" visible="true" weight="0.32908705" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49832404" weight="0.32908705" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -342,7 +435,7 @@
       <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.49944136" weight="0.32908705" />
       <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.5011173" side_tool="true" visible="true" weight="0.32908705" />
       <window_info anchor="bottom" id="Version Control" order="9" sideWeight="0.49944136" weight="0.32908705" />
-      <window_info anchor="bottom" id="Messages" order="10" sideWeight="0.49944136" weight="0.32908705" />
+      <window_info active="true" anchor="bottom" id="Messages" order="10" sideWeight="0.49888268" visible="true" weight="0.32908705" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -355,6 +448,10 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="完成了Jaxb的基础内容部分" />
+    <option name="LAST_COMMIT_MESSAGE" value="完成了Jaxb的基础内容部分" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/.idea/misc.xml">
@@ -376,13 +473,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/xml/jaxb/base/write.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="4" column="20" lean-forward="true" selection-start-line="4" selection-start-column="20" selection-end-line="4" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="66">
@@ -397,61 +487,122 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/xml/jaxb/base/parse.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="7" column="16" selection-start-line="7" selection-start-column="16" selection-end-line="7" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/xml/jaxb/base/JaxbBase.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="349">
-          <caret line="34" column="13" lean-forward="true" selection-start-line="34" selection-start-column="13" selection-end-line="34" selection-end-column="13" />
+        <state relative-caret-position="506">
+          <caret line="37" selection-start-line="37" selection-end-line="39" selection-end-column="58" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#339#340#0" expanded="true" />
-            <element signature="e#377#378#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/xml/jaxb/base/pojo/ComplexNodeAdapter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="66">
-          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+        <state relative-caret-position="88">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/xml/jaxb/base/pojo/ComplexNode.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="274">
-          <caret line="13" column="5" lean-forward="true" selection-start-line="13" selection-start-column="5" selection-end-line="13" selection-end-column="5" />
+        <state relative-caret-position="286">
+          <caret line="13" column="5" selection-start-line="13" selection-start-column="5" selection-end-line="13" selection-end-column="5" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/xml/jaxb/base/parse.xml">
+    <entry file="file://$PROJECT_DIR$/src/xml/jaxb/base/JaxbBaseSecond.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="7" column="16" lean-forward="true" selection-start-line="7" selection-start-column="16" selection-end-line="7" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/xml/jaxb/base/pojo/Server.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="98">
-          <caret line="27" column="62" selection-start-line="27" selection-start-column="62" selection-end-line="27" selection-end-column="62" />
+        <state relative-caret-position="186">
+          <caret line="35" column="13" lean-forward="true" selection-start-line="35" selection-start-column="13" selection-end-line="35" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1631#1632#0" expanded="true" />
-            <element signature="e#1659#1660#0" expanded="true" />
-            <element signature="e#1690#1691#0" expanded="true" />
-            <element signature="e#1717#1718#0" expanded="true" />
-            <element signature="e#2501#2502#0" expanded="true" />
-            <element signature="e#2535#2536#0" expanded="true" />
-            <element signature="e#2594#2595#0" expanded="true" />
-            <element signature="e#2640#2641#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/xml/jaxb/base/write.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="4" column="20" lean-forward="true" selection-start-line="4" selection-start-column="20" selection-end-line="4" selection-end-column="20" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/xml/jaxb/base/JaxbBaseTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="46" column="38" selection-start-line="46" selection-start-column="38" selection-end-line="46" selection-end-column="38" />
+        <state relative-caret-position="298">
+          <caret line="38" column="41" selection-start-line="38" selection-start-column="41" selection-end-line="38" selection-end-column="41" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/xml/jaxb/base/pojo/ServerSecond.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="142">
+          <caret line="79" column="5" lean-forward="true" selection-start-line="79" selection-start-column="5" selection-end-line="79" selection-end-column="5" />
+          <folding>
+            <element signature="e#794#795#0" expanded="true" />
+            <element signature="e#819#820#0" expanded="true" />
+            <element signature="e#852#853#0" expanded="true" />
+            <element signature="e#880#881#0" expanded="true" />
+            <element signature="e#911#912#0" expanded="true" />
+            <element signature="e#938#939#0" expanded="true" />
+            <element signature="e#978#979#0" expanded="true" />
+            <element signature="e#1010#1011#0" expanded="true" />
+            <element signature="e#1039#1040#0" expanded="true" />
+            <element signature="e#1064#1065#0" expanded="true" />
+            <element signature="e#1100#1101#0" expanded="true" />
+            <element signature="e#1128#1129#0" expanded="true" />
+            <element signature="e#1156#1157#0" expanded="true" />
+            <element signature="e#1183#1184#0" expanded="true" />
+            <element signature="e#1220#1221#0" expanded="true" />
+            <element signature="e#1252#1253#0" expanded="true" />
+            <element signature="e#1317#1318#0" expanded="true" />
+            <element signature="e#1346#1347#0" expanded="true" />
+            <element signature="e#1390#1391#0" expanded="true" />
+            <element signature="e#1426#1427#0" expanded="true" />
+            <element signature="e#1460#1461#0" expanded="true" />
+            <element signature="e#1490#1491#0" expanded="true" />
+            <element signature="e#1536#1537#0" expanded="true" />
+            <element signature="e#1574#1575#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/xml/jaxb/base/parseSecond.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/xml/jaxb/base/writeSecond.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="6" column="15" lean-forward="true" selection-start-line="6" selection-start-column="15" selection-end-line="6" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/xml/jaxb/base/JaxbBaseSecondTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="44" column="45" selection-start-line="44" selection-start-column="45" selection-end-line="44" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/xml/jaxb/base/pojo/Server.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="274">
+          <caret line="35" column="21" lean-forward="true" selection-start-line="35" selection-start-column="21" selection-end-line="35" selection-end-column="21" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

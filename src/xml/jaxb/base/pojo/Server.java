@@ -4,11 +4,18 @@ import javax.xml.bind.annotation.*;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
+ * 包括了jaxb一些注解的用法，包括@XmlRootElement，@XmlAccessorType，@XmlType，@XmlTransient，@XmlAttribute
+ * 和@XmlJavaTypeAdapter
+ * 其他的注解在另外一个类中有涉及
+ * @see xml.jaxb.base.pojo.ServerSecond
+ */
+
+/*
  * 映射的xml的节点的名称，如果不写name属性，则默认节点名称为类名，还有一个属性是namespace，后续再补充
  */
 @XmlRootElement(name = "serverExample")
 
-/**
+/*
  * 指定映射java对象和xml文件时，对java对象属性的访问方式
  *  XmlAccessType.FIELD java对象中的所有成员变量
  *  XmlAccessType.PROPERTY java对象中所有通过getter/setter方式访问的成员变量
@@ -16,7 +23,7 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  *  XmlAccessType.NONE java对象的所有属性都不映射为xml的元素
  * */
 @XmlAccessorType(XmlAccessType.FIELD)
-/**
+/*
  *  jaxb生成的xml文件中的元素顺序是不确定的。使用这个注解可以指定元素的生成顺序。
  *  当使用propOrder属性时，必须指出JavaBean对象中所有的属性，否则报错。但是被@XmlTransient和@XmlAttribute修饰的属性是不用指出的
  *  同时使用@XmlType(propOrder={})和@XmlAccessorOrder(XmlAccessOrder.ALPHABETICAL)时，生成的xml只按照propOrder的顺序
