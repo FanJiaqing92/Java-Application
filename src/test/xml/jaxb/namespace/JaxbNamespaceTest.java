@@ -32,7 +32,13 @@ public class JaxbNamespaceTest {
     @Test
     public void testParse(){ 
         //TODO: Test goes here... 
-    
+        String path = "src/test/xml/jaxb/namespace/parse.xml";
+        JaxbNamespace jaxbNamespace = new JaxbNamespace(path);
+        Server server = jaxbNamespace.parse();
+        System.out.println("Id: " + server.getId());
+        System.out.println("Name: " + server.getName());
+        System.out.println("Ip: " + server.getIp());
+        System.out.println("Port: " + server.getPort());
     } 
 
 /** 
