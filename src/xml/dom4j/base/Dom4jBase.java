@@ -8,10 +8,8 @@ import org.dom4j.io.XMLWriter;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.util.LinkedList;
 import java.util.List;
 import java.util.Objects;
-import java.util.Queue;
 
 /**
  * 描述Dom4j如何解析xml文件和将对象转化成xml文件，更高级的用法在后续碰到了再补充。
@@ -19,6 +17,8 @@ import java.util.Queue;
  * @author Jiaqing Fan
  * @date 2018/09/10
  */
+    //TODO 想要把被注释了的节点从Comment转化回Element
+    //目前没有找到合适的方法，难道需要解析字符串然后重新创建吗？Dom4j没有这种api还是我还没有找到
 public class Dom4jBase {
     private String xmlPath;
     private Document document;
@@ -27,32 +27,59 @@ public class Dom4jBase {
         this.xmlPath = xmlPath;
     }
 
-    public void print(){
-        parse();
+    public void parse(){
+        SAXReader saxReader = new SAXReader();
+        try {
+            document = saxReader.read(new File(xmlPath));
+        } catch (DocumentException e) {
+            e.printStackTrace();
+        }
         if (Objects.isNull(document)){
             return;
         }
+        //获取文件根节点
         Element root = document.getRootElement();
-        Queue<Element> upQueue = new LinkedList<>();
-        Queue<Element> downQueue = new LinkedList<>();
-        upQueue.add(root);
-        while (!upQueue.isEmpty() || !downQueue.isEmpty()){
-            if (upQueue.isEmpty()){
-                upQueue.addAll(downQueue);
-                downQueue.clear();
-                System.out.println();
-                System.out.println();
-                continue;
+
+        //获取document下的所有node。其中有且只有一个Element（就是xml的根节点），会有零个或多个Comment
+        //Node,Element,Comment都是接口，Node是Element和Comment的某一级父类，Element和Comment没有关系
+        //如果想要获取document下的所有注释，遍历所有node，然后判断类型，是Element的就是根节点，是Comment的就是注释
+        List<Node> nodeList = document.content();
+        nodeList.forEach(node -> {
+            if (node instanceof Element){
+                System.out.println("这是根节点， Name: "  + node.getName());
+                //这里根节点的内容中会输出空白符，我感觉这个空白符是xml中子节点外的换行
+                System.out.println("这是根节点， Text: "  + node.getText());
             }
-            Element element = upQueue.poll();
-            System.out.println("Tag: " + element.getName());
-            List<Attribute> attributeList = element.attributes();
-            attributeList.forEach(attribute ->
-                    System.out.println(" Attribute: name = " + attribute.getName() + " value = " + attribute.getValue())
-            );
-            System.out.println();
-            downQueue.addAll(element.elements());
-        }
+            else if (node instanceof Comment){
+                //注释是没有节点名的，getName拿到的是null
+                System.out.println("这是注释， Name: " + node.getName());
+                //Text就是注释内容
+                System.out.println("这是注释， Text: " + node.getText());
+            }
+        });
+        //获取root下所有节点，这里只有一个
+        List<Element> subRoot = root.elements();
+
+        Element sub1 = subRoot.get(0);
+        //获取sub1下所有元素节点，list中的顺序就是xml文件中的顺序。如果改变其中元素的顺序，然后直接打印，新生成的xml
+        //文件中节点的顺序会是改变之后的节点顺序。所以，如果要在某个中间位置插入一个节点，添加到subList对应的index上就可以了。
+        //除了获取所有的子节点，获取某一个节点名称的api。
+        //list中不包括注释Comment
+        List<Element> subList = sub1.elements();
+
+        //如果要读取注释，则要使用content。但是其中会包括例如换行符之类的元素，所以需要甄别。
+        List<Node> subNodeList = sub1.content();
+
+        subNodeList.forEach(subNode -> {
+            if (subNode instanceof Comment){
+                System.out.println("这是一个注释，Text: " + subNode.getText());
+            }
+        });
+
+        Element sub2 = subList.get(0);
+        //Attribute也和Element类似，list中的顺序就是xml文档中属性的顺序。
+        List<Attribute> sub2AttributeList = sub2.attributes();
+
     }
 
     public void write(Document document){
@@ -120,6 +147,19 @@ public class Dom4jBase {
         Comment comment2 = DocumentHelper.createComment("这是一个注释");
         subElement1.add(comment2);
 
+        //给1添加好多个节点
+        Element subElement4 = DocumentHelper.createElement("sub4");
+        subElement1.add(subElement4);
+
+        Element subElement5 = DocumentHelper.createElement("sub5");
+        subElement1.add(subElement5);
+
+        Element subElement6 = DocumentHelper.createElement("sub6");
+        subElement1.add(subElement6);
+
+        Element subElement7 = DocumentHelper.createElement("sub7");
+        subElement1.add(subElement7);
+
         return document;
     }
     private OutputFormat getOutputFormat(){
@@ -133,12 +173,5 @@ public class Dom4jBase {
         return format;
     }
 
-    private void parse(){
-        SAXReader saxReader = new SAXReader();
-        try {
-            document = saxReader.read(new File(xmlPath));
-        } catch (DocumentException e) {
-            e.printStackTrace();
-        }
-    }
+
 }

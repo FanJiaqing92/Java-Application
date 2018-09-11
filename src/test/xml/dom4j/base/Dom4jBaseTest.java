@@ -26,13 +26,15 @@ public class Dom4jBaseTest {
 
 /** 
 * 
-* Method: print() 
+* Method: parse()
 * 
 */ 
     @Test
-    public void testPrint(){ 
+    public void testParse(){
         //TODO: Test goes here... 
-    
+        String xmlPath = "src/test/xml/dom4j/base/parse.xml";
+        Dom4jBase dom4jBase = new Dom4jBase(xmlPath);
+        dom4jBase.parse();
     } 
 
 /** 
