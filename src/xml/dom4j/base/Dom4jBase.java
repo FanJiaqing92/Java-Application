@@ -5,9 +5,7 @@ import org.dom4j.io.OutputFormat;
 import org.dom4j.io.SAXReader;
 import org.dom4j.io.XMLWriter;
 
-import java.io.File;
-import java.io.FileWriter;
-import java.io.IOException;
+import java.io.*;
 import java.util.List;
 import java.util.Objects;
 
@@ -77,8 +75,12 @@ public class Dom4jBase {
         });
 
         Element sub2 = subList.get(0);
+
         //Attribute也和Element类似，list中的顺序就是xml文档中属性的顺序。
         List<Attribute> sub2AttributeList = sub2.attributes();
+        sub2AttributeList.forEach(attribute -> {
+            //avoid findbugs, do noting.
+        });
 
     }
 
@@ -90,7 +92,8 @@ public class Dom4jBase {
         OutputFormat format = getOutputFormat();
         XMLWriter writer = null;
         try {
-            writer = new XMLWriter(new FileWriter(new File(xmlPath)), format);
+            writer = new XMLWriter(new OutputStreamWriter(
+                    new FileOutputStream(xmlPath), "UTF-8"), format);
             writer.write(document);
             //官方api建议write之后马上进行flush操作
             writer.flush();
