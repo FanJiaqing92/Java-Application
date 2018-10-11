@@ -1,7 +1,13 @@
 package time.java8;
 
 import java.time.*;
+import java.time.format.DateTimeFormatter;
 import java.time.temporal.ChronoField;
+import java.time.temporal.ChronoUnit;
+import java.time.temporal.TemporalUnit;
+
+import static java.time.temporal.TemporalAdjusters.lastDayOfMonth;
+import static java.time.temporal.TemporalAdjusters.nextOrSame;
 
 /**
  * @ClassName DateTime
@@ -126,5 +132,62 @@ public class DateTime {
         //这个类是为了方便机器使用，因此它无法处理那些我们非常容易理解的时间单位
         //下面这行代码就会抛出一个异常
         //int day = Instant.now().get(ChronoField.DAY_OF_MONTH);
+    }
+
+    public static void durationAndPeriod(){
+        LocalTime time1 = LocalTime.of(12,12,12);
+        LocalTime time2 = LocalTime.of(13,13,13);
+        Duration duration1 = Duration.between(time1, time2);
+        System.out.println("duration1 day: " + duration1.toDays());
+        System.out.println("duration1 hour: " + duration1.toHours());
+        System.out.println("duration1 minute: " + duration1.toMinutes());
+        System.out.println("duration1 milli: " + duration1.toMillis());
+        System.out.println("duration1 nano: " + duration1.toNanos());
+
+        Instant instant1 = Instant.ofEpochSecond(100);
+        Instant instant2 = Instant.ofEpochSecond(1000);
+        Duration duration2 = Duration.between(instant1, instant2);
+        System.out.println("duration2 day: " + duration2.toDays());
+        System.out.println("duration2 hour: " + duration2.toHours());
+        System.out.println("duration2 minute: " + duration2.toMinutes());
+        System.out.println("duration2 milli: " + duration2.toMillis());
+        System.out.println("duration2 nano: " + duration2.toNanos());
+
+        //Duration就是表示一个时间段，还有增加、减少和单位转化的api
+
+        //如果要以年，月或者日的像是对时间单位建模，可以使用Period类
+        Period tenDays = Period.between(LocalDate.of(2014, 3, 8),
+                LocalDate.of(2014, 3, 18));
+        System.out.println("Period day: " + tenDays.getDays());
+    }
+
+    /**
+     * TemporalAdjuster类提供了更加复杂的日期操作。除了举例的两个之外，TemporalAdjuster类中还有其它的预定义方法。
+     * 你还可以自定义其它复杂的日期操作。TemporalAdjuster是一个函数式接口，实现的时候只需要将一个Temporal对象转化
+     * 成另一个Temporal对象即可。可以把它看做一个UnaryOperator<Temporal>
+     */
+    public static void temporalAdjuster(){
+        LocalDate date1 = LocalDate.of(2014, 3, 18);
+        LocalDate date2 = date1.with(nextOrSame(DayOfWeek.SUNDAY));
+        LocalDate date3 = date1.with(lastDayOfMonth());
+        System.out.println("TemporalAdjuster date2: " + date2);
+        System.out.println("TemporalAdjuster date3: " + date3);
+
+        //简单的自定义例子，返回下一天的日期
+        LocalDate date4 = date1.with(temporal -> temporal.plus(1, ChronoUnit.DAYS));
+        System.out.println("TemporalAdjuster date4: " + date4);
+    }
+
+    /**
+     * java.time.format包是为了时间、日期对象的格式化和解析而设计的。其中DateTimeFormatter类最重要。DateTimeFormatter中
+     * 预定义了很多样式。这里举例两个
+     */
+    public static void dateTimeFormatter(){
+        LocalDate date1 = LocalDate.of(2014, 3, 18);
+        System.out.println("DateTimeFormatter.BASIC_ISO_DATE: " + date1.format(DateTimeFormatter.BASIC_ISO_DATE));
+        System.out.println("DateTimeFormatter.ISO_LOCAL_DATE: " + date1.format(DateTimeFormatter.ISO_LOCAL_DATE));
+
+        //LocalDate date2 = LocalDate.parse("20140318", DateTimeFormatter.BASIC_ISO_DATE);
+        //LocalDate date3 = LocalDate.parse("2014-03-18", DateTimeFormatter.ISO_LOCAL_DATE);
     }
 }
