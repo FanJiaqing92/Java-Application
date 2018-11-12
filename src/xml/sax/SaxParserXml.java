@@ -10,10 +10,10 @@ import java.io.IOException;
 import java.util.List;
 
 /**
- * @ClassName SaxParserXml
- * @Descripiton //TODO
- * @Author Jiaqing Fan
- * @Date 2018/10/16
+ * ClassName SaxParserXml
+ * Description //TODO
+ * Author Jiaqing Fan
+ * Date 2018/10/16
  */
 public class SaxParserXml {
     private String xmlPath;
@@ -25,8 +25,10 @@ public class SaxParserXml {
     public void parser(){
         File xml = new File(xmlPath);
         SAXParserFactory factory = SAXParserFactory.newInstance();
+        //设置成感知namespace
+        factory.setNamespaceAware(true);
         SaxParseHandler handler = new SaxParseHandler();
-        SAXParser saxParser = null;
+        SAXParser saxParser;
         try {
             saxParser = factory.newSAXParser();
             saxParser.parse(xml, handler);

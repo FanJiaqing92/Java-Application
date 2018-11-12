@@ -1,10 +1,10 @@
 package xml.sax;
 
 /**
- * @ClassName User
- * @Descripiton //TODO
- * @Author Jiaqing Fan
- * @Date 2018/10/16
+ * ClassName User
+ * Description //TODO
+ * Author Jiaqing Fan
+ * Date 2018/10/16
  */
 public class User {
     private long id;
