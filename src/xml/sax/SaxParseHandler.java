@@ -16,6 +16,9 @@ import java.util.List;
  */
 public class SaxParseHandler extends DefaultHandler {
 
+    private static final String USER = "h:user";
+    private static final String NAME = "name";
+    private static final String PASSWORD = "password";
     private List<User> users;
     private String currentTag; // 记录当前解析到的节点名称
     private User user; // 记录当前的user
@@ -59,7 +62,7 @@ public class SaxParseHandler extends DefaultHandler {
     public void startElement(String uri, String localName, String qName,
                              Attributes attributes) throws SAXException {
         super.startElement(uri, localName, qName, attributes);
-        if (StringUtils.equals(qName, "h:user")) { // 是一个用户
+        if (StringUtils.equals(qName, USER)) { // 是一个用户
             for (int i = 0; i < attributes.getLength(); i++) {
                 user = new User();
                 //暂时没有发现这两个有什么区别，难道属性也可以专门加命名空间？明天继续
@@ -71,7 +74,7 @@ public class SaxParseHandler extends DefaultHandler {
                 }
             }
         }
-        currentTag = localName; // 把当前标签记录下来
+        currentTag = qName; // 把当前标签记录下来
     }
 
     /**
@@ -84,9 +87,8 @@ public class SaxParseHandler extends DefaultHandler {
     public void endElement(String uri, String localName, String qName)
             throws SAXException {
         super.endElement(uri, localName, qName);
-        System.out.println("endElement. localName: " + localName);
-        if("user".equals(localName)){
-            //users.add(user);
+        if(StringUtils.equals(qName, USER)){
+            users.add(user);
             user = null;
         }
         currentTag = null;
@@ -96,14 +98,14 @@ public class SaxParseHandler extends DefaultHandler {
     public void characters(char[] ch, int start, int length)
             throws SAXException {
         super.characters(ch, start, length);
-        String value = new String(ch,start,length); // 将当前TextNode转换为String
-        System.out.println("characters. value: " + value);
-        if("name".equals(currentTag)){  // 当前标签为name标签，该标签无子标签，直接将上面获取到的标签的值封装到当前User对象中
+        String value = new String(ch, start, length); // 将当前TextNode转换为String
+        if (StringUtils.equals(currentTag, NAME)){  // 当前标签为name标签，该标签无子标签，直接将上面获取到的标签的值封装到当前User对象中
             // 该节点为name节点
-            //user.setName(value);
-        }else if("password".equals(currentTag)){  // 当前标签为password标签，该标签无子标签，直接将上面获取到的标签的值封装到当前User对象中
+            user.setName(value);
+        }
+        else if(StringUtils.equals(currentTag, PASSWORD)){  // 当前标签为password标签，该标签无子标签，直接将上面获取到的标签的值封装到当前User对象中
             // 该节点为password节点
-            //user.setPassword(value);
+            user.setPassword(value);
         }
     }
 
