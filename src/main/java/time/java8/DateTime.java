@@ -2,9 +2,7 @@ package time.java8;
 
 import java.time.*;
 import java.time.format.DateTimeFormatter;
-import java.time.temporal.ChronoField;
 import java.time.temporal.ChronoUnit;
-import java.time.temporal.TemporalUnit;
 
 import static java.time.temporal.TemporalAdjusters.lastDayOfMonth;
 import static java.time.temporal.TemporalAdjusters.nextOrSame;

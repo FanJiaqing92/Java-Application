@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<ns3:ServerNamespace xmlns:ns2="nsTest2" xmlns:ns3="nsTest">
-    <id>1</id>
-    <name>Server namespace test</name>
-    <ns2:ip>3.3.3.3</ns2:ip>
-    <port>8989</port>
-</ns3:ServerNamespace>

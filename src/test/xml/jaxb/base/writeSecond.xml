@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<serverSecond aSecond="second attribute" bFirst="first attribute">
-    <id>1</id>
-    <ip>2.2.2.2</ip>
-    <names>This is second server</names>
-    <port>8088</port>
-</serverSecond>
